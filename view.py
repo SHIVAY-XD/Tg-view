@@ -126,10 +126,10 @@ G = '\033[1;32m'
 S = '\033[1;33m'
 logo=(f'''{B}{E}====================================================={E}
 {E} This script Free For All Pls Don't Sell And Scam Any One...{B}
-|         {G}[+] Made By  : {B}shivay                   |
-|         {G}[+] GitHub UserName   : {B}shivay-xd    |
-|         {G}[+] TeleGram UserName : {B}@Botsexpert    |
-|         {G}[+] TeleGram Channel  : {B}@TheUpdatesChannel       |
+|         {G}[+] Made By  : {B}shivay|
+|         {G}[+] GitHub UserName   : {B}shivay-xd|
+|         {G}[+] TeleGram UserName : {B}@Botsexpert|
+|         {G}[+] TeleGram Channel  : {B}@TheUpdatesChannel|
 |         {G}[+] TeleGram Support  : {B}@TheSupportChat  |
 {E}=====================================================''')
 def tui():
