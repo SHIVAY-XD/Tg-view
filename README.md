@@ -20,4 +20,5 @@
 
 - `cd Tg-view`
 - `ls`
-- 
+- `pip install -r requirements.txt`
+- python view.py
