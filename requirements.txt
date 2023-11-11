@@ -1,3 +1,2 @@
 colorama>=0.4.3
 bs64
-view.txt
