@@ -16,7 +16,7 @@
 </details>
 
  - Install all cmds :
-- `▸  apt update && apt upgrade && pkg install python && pkg install git && git clone https://github.com/shivay-xd/Tg-view`
+- `apt update && apt upgrade && pkg install python && pkg install git && git clone https://github.com/shivay-xd/Tg-view`
 
 - `cd Tg-view`
 - `ls`
