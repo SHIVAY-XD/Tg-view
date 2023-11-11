@@ -15,11 +15,11 @@
 <br>
 </details>
 <details>
-<summary><b>Install all cmds :</b></summary>
+<summary><b>Install all cmds :</b>
 
     - apt update && apt upgrade && pkg install python && pkg install git && git clone https://github.com/shivay-xd/Tg-view
   - cd Tg-view
   - ls
 - `pip install -r requirements.txt`
 - `python view.py`
-</details>
+</summary></details>
