@@ -16,4 +16,4 @@
 </details>
 
  - Install all cmds :
-- `apt update && apt upgrade && apt install git && apt-get install python3-pip -y && pip3 install -U pip && git clone https://github.com/shivay-xd/Tg-view`
+- `apt update && apt upgrade && apt install git && apt-get install python3-pip -y && pip3 install -Y && git clone https://github.com/shivay-xd/Tg-view`
