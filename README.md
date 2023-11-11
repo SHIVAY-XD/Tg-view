@@ -14,11 +14,13 @@
 <summary><b>ғᴇᴀᴛᴜʀᴇs</b></summary>
 <br>
 </details>
-
+<details>
 <summary><b>Install all cmds :</b></summary>
-- `apt update && apt upgrade && pkg install python && pkg install git && git clone https://github.com/shivay-xd/Tg-view`
+
+    - `apt update && apt upgrade && pkg install python && pkg install git && git clone https://github.com/shivay-xd/Tg-view`
 
 - `cd Tg-view`
 - `ls`
 - `pip install -r requirements.txt`
 - `python view.py`
+</details>
