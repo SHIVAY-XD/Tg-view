@@ -8,10 +8,10 @@
 <p align="center">
   <img src="https://graph.org/file/35326d6881e4e8ea534b4.jpg">
 </p>
-## Features Of Tg-views TOOLS ❤️
+# Features Of Tg-views TOOLS ❤️
 
 <details>
-<summary><b>Install all cmds :</b></summary>
+<summary><b>Install all cmds :</b></summary><br>
 
     - apt update && apt upgrade && pkg install python && pkg install git && git clone https://github.com/shivay-xd/Tg-view
     - cd Tg-view
