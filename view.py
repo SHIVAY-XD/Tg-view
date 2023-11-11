@@ -134,13 +134,13 @@ logo=(f'''{B}{E}====================================================={E}
 def tui():
     while True:
         print(logo)
-        print(f'''{B}[ Data ]: {G}{channel.capitalize()}/{post}
-{B}[ Live Views ]: {G}{real_views} ✅
+        print(f'''{B}[ ᴅᴀᴛᴀ ]: {G}{channel.capitalize()}/{post}
+{B}[ ʟɪᴠᴇ ᴠɪᴇᴡs ]: {G}{real_views} ✅
  
-{S}[ Connection Errors ]: {E}{proxy_errors} 🚫
-{S}[ Token Errors ]: {E}{token_errors} ❌
+{S}[ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ᴇʀʀᴏʀs ]: {E}{proxy_errors} 🚫
+{S}[ ᴛᴏᴋᴇɴ ᴇʀʀᴏʀs ]: {E}{token_errors} ❌
  
-{G}[ Threads ]: {B}{active_count()} ⇝⇝⇝⇝ ''')
+{G}[ ᴛʜʀᴇᴀᴅs ]: {B}{active_count()} ⇝⇝⇝⇝ ''')
         sleep(2);system('cls' if name == 'nt' else 'clear')
 
 system('cls' if name == 'nt' else 'clear')
@@ -152,7 +152,7 @@ try:
     params={'embed': '1', 'mode': 'tme'}, headers={'referer': f'https://t.me/{channel}/{post}', 'user-agent': USER_AGENT}).text).group(1)
 except: print(f'{E}[×] Error | Channel Or Post Not Found!');sleep(3);exit()
 else:
-    print(f'{G}[√] Stated | ᴡᴀɪᴛ ғᴇᴡ sᴇᴄᴏɴᴅs ᴛᴏ ʀᴜɴ ᴛʜʀᴇᴀᴅs')
+    print(f'{G}[√]sᴛᴀʀᴛᴇᴅ | ᴡᴀɪᴛ ғᴇᴡ sᴇᴄᴏɴᴅs ᴛᴏ ʀᴜɴ ᴛʜʀᴇᴀᴅs')
     Thread(target=start_view).start()
     Thread(target=check_views).start()
     sleep(7.5);system('cls' if name == 'nt' else 'clear')
