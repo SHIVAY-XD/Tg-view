@@ -125,12 +125,11 @@ B = '\033[2;36m'
 G = '\033[1;32m'
 S = '\033[1;33m'
 logo=(f'''{B}{E}====================================================={E}
-{E} This script Free For All Pls Don't Sell And Scam Any One...{B}
-|         {G}[+] Made By  : {B}shivay|
-|         {G}[+] GitHub UserName   : {B}shivay-xd|
-|         {G}[+] TeleGram UserName : {B}@Botsexpert|
-|         {G}[+] TeleGram Channel  : {B}@TheUpdatesChannel|
-|         {G}[+] TeleGram Support  : {B}@TheSupportChat  |
+{E} ᴛʜɪs sᴄʀɪᴘᴛ ғʀᴇᴇ ғᴏʀ ᴀʟʟ ᴘʟs ᴅᴏɴ'ᴛ sᴇʟʟ ᴀɴᴅ sᴄᴀᴍ ᴀɴʏ ᴏɴᴇ...{B}
+|         {G}[+] Made By  : {B}sʜɪᴠᴀʏ |
+|         {G}[+] ɢɪᴛʜᴜʙ ᴜsᴇʀɴᴀᴍᴇ   : {B}sʜɪᴠᴀʏ-xᴅ |
+|         {G}[+] ᴛᴇʟᴇɢʀᴀᴍ ᴜsᴇʀɴᴀᴍᴇ : {B}@ʙᴏᴛsᴇxᴘᴇʀᴛ |
+|         {G}[+] ᴛᴇʟᴇɢʀᴀᴍ ᴄʜᴀɴɴᴇʟ  : {B}@ɪᴛsᴛᴇᴀᴄʜᴛᴇᴀᴍ|
 {E}=====================================================''')
 def tui():
     while True:
@@ -146,7 +145,7 @@ def tui():
 
 system('cls' if name == 'nt' else 'clear')
 print(logo)
-channel, post = input(f"{G}[+] TeleGram View Post URL ==> {S}").replace('https://t.me/', '').split('/')
+channel, post = input(f"\n{G}[+] ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴇᴡ ᴘᴏsᴛ ᴜʀʟ ==> {S}").replace('https://t.me/', '').split('/')
 
 try:
     search('<span class="tgme_widget_message_views">([^<]+)', requests.get(f'https://t.me/{channel}/{post}',
