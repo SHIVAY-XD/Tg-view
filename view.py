@@ -152,7 +152,7 @@ try:
     params={'embed': '1', 'mode': 'tme'}, headers={'referer': f'https://t.me/{channel}/{post}', 'user-agent': USER_AGENT}).text).group(1)
 except: print(f'{E}[×] Error | Channel Or Post Not Found!');sleep(3);exit()
 else:
-    print(f'{G}[√] Stated | Wait few seconds to run threads')
+    print(f'{G}[√] Stated | ᴡᴀɪᴛ ғᴇᴡ sᴇᴄᴏɴᴅs ᴛᴏ ʀᴜɴ ᴛʜʀᴇᴀᴅs')
     Thread(target=start_view).start()
     Thread(target=check_views).start()
     sleep(7.5);system('cls' if name == 'nt' else 'clear')
