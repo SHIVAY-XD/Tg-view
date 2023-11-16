@@ -103,7 +103,7 @@ def start_view():
             while active_count() > THREADS: sleep(0.05)
             thread.start()
         c += 1
-        sleep(2)
+        sleep(0)
     for t in threads:
         t.join()
         start_view()
@@ -116,7 +116,7 @@ def check_views():
             telegram_request = requests.get(f'https://t.me/{channel}/{post}', params={'embed': '1', 'mode': 'tme'},
                                 headers={'referer': f'https://t.me/{channel}/{post}', 'user-agent': USER_AGENT})
             real_views = search('<span class="tgme_widget_message_views">([^<]+)', telegram_request.text).group(1)
-            sleep(2)
+            sleep(0)
         except: pass
 
 
