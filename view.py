@@ -26,7 +26,7 @@ cfg.read("config.ini", encoding="utf-8")
 
 http, socks4, socks5 = '', '', ''
 try: http, socks4, socks5 = cfg["HTTP"], cfg["SOCKS4"], cfg["SOCKS5"]
-except KeyError: print(' [ OUTPUT ] Error | config.ini not found!');sleep(3);exit()
+except KeyError: print(' [ OUTPUT ] Error | config.ini not found!');sleep(0);exit()
 
 http_proxies, socks4_proxies, socks5_proxies = [], [], []
 proxy_errors, token_errors = 0, 0
