@@ -1,14 +1,10 @@
-import os
-try:
- import requests
- from time import sleep
- from configparser import ConfigParser
- from os import system, name
- from threading import Thread, active_count
- from re import search, compile
-except:
- os.system('pip install requests')
- os.system('pip install configparser')
+import requests
+from time import sleep
+from configparser import ConfigParser
+from os import system, name
+from threading import Thread, active_count
+from re import search, compile
+
 THREADS = 500
 PROXIES_TYPES = ('http', 'socks4', 'socks5')
 USER_AGENT = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36'
@@ -26,7 +22,7 @@ cfg.read("config.ini", encoding="utf-8")
 
 http, socks4, socks5 = '', '', ''
 try: http, socks4, socks5 = cfg["HTTP"], cfg["SOCKS4"], cfg["SOCKS5"]
-except KeyError: print(' [ OUTPUT ] Error | config.ini not found!');sleep(0);exit()
+except KeyError: print(' [ OUTPUT ] Error | config.ini not found!');sleep(3);exit()
 
 http_proxies, socks4_proxies, socks5_proxies = [], [], []
 proxy_errors, token_errors = 0, 0
@@ -103,7 +99,7 @@ def start_view():
             while active_count() > THREADS: sleep(0.05)
             thread.start()
         c += 1
-        sleep(0)
+        sleep(2)
     for t in threads:
         t.join()
         start_view()
@@ -116,46 +112,53 @@ def check_views():
             telegram_request = requests.get(f'https://t.me/{channel}/{post}', params={'embed': '1', 'mode': 'tme'},
                                 headers={'referer': f'https://t.me/{channel}/{post}', 'user-agent': USER_AGENT})
             real_views = search('<span class="tgme_widget_message_views">([^<]+)', telegram_request.text).group(1)
-            sleep(0)
+            sleep(2)
         except: pass
+def banner():
+	rishabh(f"""{lg}
+	
+ ________  ___       ___      ___ ___   ___         
+|\   __  \|\  \     |\  \    /  /|\  \ |\  \        
+\ \  \|\  \ \  \    \ \  \  /  / | \  \\_\  \       
+ \ \   ____\ \  \    \ \  \/  / / \ \______  \      
+  \ \  \___|\ \  \____\ \    / /   \|_____|\  \     
+   \ \__\    \ \_______\ \__/ /           \ \__\    
+    \|__|     \|_______|\|__|/             \|__|    
+                                                    
+      OWNER {pk} RISHABH,{lg} USERNAME -> {pk} @Thanosceo | @Botsexpert    
+                                         
+Thank you for visiting the Thanos pro script modules installer.  
 
-
-E = '\033[1;31m'
-B = '\033[2;36m'
-G = '\033[1;32m'
-S = '\033[1;33m'
-logo = '''  
+logo = '''
 █░█ █ █▀▀ █░█░█ █▀
 ▀▄▀ █ ██▄ ▀▄▀▄▀ ▄█
-logo = f'''{B}{E}====================================================={E}
-{E} ᴛʜɪs sᴄʀɪᴘᴛ ғʀᴇᴇ ғᴏʀ ᴀʟʟ ᴘʟs ᴅᴏɴ'ᴛ sᴇʟʟ ᴀɴᴅ sᴄᴀᴍ ᴀɴʏ ᴏɴᴇ...{B}
-|         {G}[+] ᴅᴇᴠᴇʟᴏᴘᴇʀ : {B}sʜɪᴠᴀʏ                  |
-|         {G}[+] ɢɪᴛʜᴜʙ ᴜsᴇʀɴᴀᴍᴇ   : {B}sʜɪᴠᴀʏ-xᴅ       |
-|         {G}[+] ᴛᴇʟᴇɢʀᴀᴍ ᴜsᴇʀɴᴀᴍᴇ : {B}@ʙᴏᴛsᴇxᴘᴇʀᴛ     |
-|         {G}[+] ᴛᴇʟᴇɢʀᴀᴍ ᴄʜᴀɴɴᴇʟ  : {B}@ɪᴛsᴛᴇᴀᴄʜᴛᴇᴀᴍ   |
-{E}====================================================='''
+'''
+
+
 def tui():
     while True:
         print(logo)
-        print(f'''{B}[ ᴅᴀᴛᴀ ]: {G}{channel.capitalize()}/{post}
-{B}[ ʟɪᴠᴇ ᴠɪᴇᴡs ]: {G}{real_views} \u2705
+        print(f'''
+  [ Data ]: {channel.capitalize()}/{post}
+  [ Live Views ]: {real_views}
  
-{S}[ ᴄᴏɴɴᴇᴄᴛɪᴏɴ ᴇʀʀᴏʀs ]: {E}{proxy_errors} 🚫
-{S}[ ᴛᴏᴋᴇɴ ᴇʀʀᴏʀs ]: {E}{token_errors} ❌
+  [ Connection Errors ]: {proxy_errors}
+  [ Token Errors ]: {token_errors}
  
-{G}[ ᴛʜʀᴇᴀᴅs ]: {B}{active_count()} ⇝⇝⇝⇝ ''')
+  [ Threads ]: {active_count()}
+        ''')
         sleep(2);system('cls' if name == 'nt' else 'clear')
 
-system('cls' if name == 'nt' else 'clear')
+
 print(logo)
-channel, post = input(f"\n{G}[+] ᴛᴇʟᴇɢʀᴀᴍ ᴠɪᴇᴡ ᴘᴏsᴛ ᴜʀʟ ==> {S}").replace('https://t.me/', '').split('/')
+channel, post = input('Enter Post URL: ').replace('https://t.me/', '').split('/')
 
 try:
     search('<span class="tgme_widget_message_views">([^<]+)', requests.get(f'https://t.me/{channel}/{post}',
     params={'embed': '1', 'mode': 'tme'}, headers={'referer': f'https://t.me/{channel}/{post}', 'user-agent': USER_AGENT}).text).group(1)
-except: print(f'{E}[×] Error | Channel Or Post Not Found!');sleep(3);exit()
+except: print(' [ OUTPUT ] Error | Channel Or Post Not Found!');sleep(3);exit()
 else:
-    print(f'{G}[√]sᴛᴀʀᴛᴇᴅ | ᴡᴀɪᴛ ғᴇᴡ sᴇᴄᴏɴᴅs ᴛᴏ ʀᴜɴ ᴛʜʀᴇᴀᴅs')
+    print(' [ OUTPUT ] Stated | Wait few seconds to run threads')
     Thread(target=start_view).start()
     Thread(target=check_views).start()
     sleep(7.5);system('cls' if name == 'nt' else 'clear')
