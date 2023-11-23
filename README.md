@@ -6,7 +6,7 @@
 </h2>
 
 <p align="center">
-  <img src="https://graph.org/file/35326d6881e4e8ea534b4.jpg">
+  <img src="https://graph.org/file/ee246c62744784b0e44df.jpg">
 </p>
 # Features Of Tg-views TOOLS ❤️
 
